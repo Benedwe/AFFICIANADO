@@ -1,0 +1,8 @@
+{
+  "name": "aficionados-state",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AFICIONADOS STATE public platform MVP",
+  "scripts": {"start": "node server.js", "dev": "node server.js", "check": "node --check server.js && node --check public/app.js", "test": "node --test"},
+  "engines": {"node": ">=20"}
+}
