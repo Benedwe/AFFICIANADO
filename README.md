@@ -8,7 +8,7 @@ Requires Docker Engine with the Compose plugin.
 
 ```sh
 cp .env.example .env
-# Edit .env and set SITE_URL to the public HTTPS origin.
+
 docker compose up --build -d
 docker compose ps
 ```
@@ -64,3 +64,4 @@ npm test
 
 Tests cover route handling, headers, health response, form validation and persistence, newsletter consent/deduplication, and SEO endpoint origin. UI automation and authorization tests remain pending because those application areas are not implemented.
 # AFFICIANADO
+# Aficianados-state
