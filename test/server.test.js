@@ -73,7 +73,7 @@ test('sitemap and robots use configured public origin', async () => {
 });
 
 test('Vercel handler stores submissions in Upstash and deduplicates newsletters', async () => {
-  const handler = require('../api/[...path]');
+  const handler = require('../api/newsletter');
   const previousFetch = global.fetch;
   const previousEnv = {
     VERCEL: process.env.VERCEL,

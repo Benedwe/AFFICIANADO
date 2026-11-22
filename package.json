@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "AFICIONADOS STATE public platform MVP",
-  "scripts": {"start": "node server.js", "dev": "node server.js", "check": "node --check server.js && node --check public/app.js && node --check 'api/[...path].js'", "test": "node --test"},
+  "scripts": {"start": "node server.js", "dev": "node server.js", "check": "node --check server.js && node --check public/app.js && node --check api/_handler.js && node --check api/contact.js && node --check api/business.js && node --check api/partnerships.js && node --check api/newsletter.js && node --check api/site/sitemap.js && node --check api/site/robots.js", "test": "node --test"},
   "engines": {"node": ">=20"}
 }
