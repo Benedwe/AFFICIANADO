@@ -1,4 +1,3 @@
-const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
@@ -192,8 +191,9 @@ function handleRequest(req, res) {
   if (req.method !== 'GET' && req.method !== 'HEAD') return json(res, 405, { error: 'Method not allowed.' });
   try { staticFile(req, res, url.pathname); } catch { json(res, 400, { error: 'Invalid path.' }); }
 }
-const server = http.createServer(handleRequest);
 if (require.main === module) {
+  const http = require('node:http');
+  const server = http.createServer(handleRequest);
   server.listen(PORT, HOST, () => console.log(`AFICIONADOS STATE listening on ${HOST}:${server.address().port}`));
   const shutdown = signal => {
     console.log(`${signal} received; closing HTTP server.`);
